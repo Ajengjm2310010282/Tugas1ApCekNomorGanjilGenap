@@ -27,15 +27,15 @@ public class Tugas1ApCekGanjilGenap extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
+        jLabelAngka = new javax.swing.JLabel();
         Angka = new javax.swing.JTextField();
         buttonHasil = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        buttonKeluar = new javax.swing.JButton();
+        buttonReset = new javax.swing.JButton();
         FHasil = new javax.swing.JPanel();
         Hasil = new javax.swing.JLabel();
-        jButton4 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        bCekPrima = new javax.swing.JButton();
+        jLabeljudul = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(204, 204, 255));
@@ -44,17 +44,12 @@ public class Tugas1ApCekGanjilGenap extends javax.swing.JFrame {
         jPanel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        jLabel2.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
-        jLabel2.setText("Angka :");
+        jLabelAngka.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        jLabelAngka.setText("Angka :");
 
         Angka.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 AngkaFocusGained(evt);
-            }
-        });
-        Angka.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AngkaActionPerformed(evt);
             }
         });
         Angka.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -72,23 +67,23 @@ public class Tugas1ApCekGanjilGenap extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(255, 182, 193));
-        jButton2.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
-        jButton2.setText("Keluar");
-        jButton2.setPreferredSize(new java.awt.Dimension(88, 38));
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        buttonKeluar.setBackground(new java.awt.Color(255, 182, 193));
+        buttonKeluar.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
+        buttonKeluar.setText("Keluar");
+        buttonKeluar.setPreferredSize(new java.awt.Dimension(88, 38));
+        buttonKeluar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                buttonKeluarActionPerformed(evt);
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(255, 182, 193));
-        jButton3.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
-        jButton3.setText("Reset");
-        jButton3.setPreferredSize(new java.awt.Dimension(88, 38));
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        buttonReset.setBackground(new java.awt.Color(255, 182, 193));
+        buttonReset.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
+        buttonReset.setText("Reset");
+        buttonReset.setPreferredSize(new java.awt.Dimension(88, 38));
+        buttonReset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                buttonResetActionPerformed(evt);
             }
         });
 
@@ -112,13 +107,13 @@ public class Tugas1ApCekGanjilGenap extends javax.swing.JFrame {
             .addComponent(Hasil, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
-        jButton4.setBackground(new java.awt.Color(255, 182, 193));
-        jButton4.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
-        jButton4.setText("Cek Prima");
-        jButton4.setPreferredSize(new java.awt.Dimension(88, 38));
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        bCekPrima.setBackground(new java.awt.Color(255, 182, 193));
+        bCekPrima.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
+        bCekPrima.setText("Cek Prima");
+        bCekPrima.setPreferredSize(new java.awt.Dimension(88, 38));
+        bCekPrima.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                bCekPrimaActionPerformed(evt);
             }
         });
 
@@ -131,17 +126,17 @@ public class Tugas1ApCekGanjilGenap extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2))
+                            .addComponent(buttonReset, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabelAngka))
                         .addGap(25, 25, 25)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(Angka, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(buttonHasil, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(26, 26, 26)
-                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(buttonKeluar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(bCekPrima, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(114, 114, 114))
                     .addComponent(FHasil, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(52, 52, 52))
@@ -151,22 +146,22 @@ public class Tugas1ApCekGanjilGenap extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(43, 43, 43)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
+                    .addComponent(jLabelAngka)
                     .addComponent(Angka, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(63, 63, 63)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buttonKeluar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(buttonHasil, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(buttonReset, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(bCekPrima, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(FHasil, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(34, 34, 34))
         );
 
-        jLabel1.setFont(new java.awt.Font("Lucida Fax", 3, 14)); // NOI18N
-        jLabel1.setText("Aplikasi Pengecekkan Nomor Ganjil Genap");
+        jLabeljudul.setFont(new java.awt.Font("Lucida Fax", 3, 14)); // NOI18N
+        jLabeljudul.setText("Aplikasi Pengecekkan Nomor Ganjil Genap");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -178,14 +173,14 @@ public class Tugas1ApCekGanjilGenap extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
+                .addComponent(jLabeljudul)
                 .addGap(60, 60, 60))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
+                .addComponent(jLabeljudul)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -193,10 +188,6 @@ public class Tugas1ApCekGanjilGenap extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void AngkaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AngkaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_AngkaActionPerformed
 
     private void buttonHasilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonHasilActionPerformed
         try {
@@ -212,15 +203,15 @@ public class Tugas1ApCekGanjilGenap extends javax.swing.JFrame {
     }
     }//GEN-LAST:event_buttonHasilActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void buttonKeluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonKeluarActionPerformed
     System.exit(0);
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_buttonKeluarActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void buttonResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonResetActionPerformed
     Angka.setText("");
     Hasil.setText("");
     Angka.requestFocus(); 
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_buttonResetActionPerformed
 
     private void AngkaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_AngkaFocusGained
     Angka.setText("");
@@ -235,7 +226,7 @@ public class Tugas1ApCekGanjilGenap extends javax.swing.JFrame {
     }
     }//GEN-LAST:event_AngkaKeyTyped
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void bCekPrimaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bCekPrimaActionPerformed
      try {
         int angka = Integer.parseInt(Angka.getText());
         boolean prima = true;
@@ -252,15 +243,15 @@ public class Tugas1ApCekGanjilGenap extends javax.swing.JFrame {
         }
 
         if (prima) {
-            Hasil.setText("Bilangan " + angka + " adalah bilangan prima.");
+            Hasil.setText("Angka " + angka + " adalah bilangan prima.");
         } else {
-            Hasil.setText("Bilangan " + angka + " bukan bilangan prima.");
+            Hasil.setText("Angka " + angka + " bukan bilangan prima.");
         }
         JOptionPane.showMessageDialog(this, Hasil.getText(), "Hasil Cek", JOptionPane.INFORMATION_MESSAGE);
     } catch (NumberFormatException ex) {
         JOptionPane.showMessageDialog(this, "Masukkan angka yang valid!", "Error", JOptionPane.ERROR_MESSAGE);
         }
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_bCekPrimaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -301,12 +292,12 @@ public class Tugas1ApCekGanjilGenap extends javax.swing.JFrame {
     private javax.swing.JTextField Angka;
     private javax.swing.JPanel FHasil;
     private javax.swing.JLabel Hasil;
+    private javax.swing.JButton bCekPrima;
     private javax.swing.JButton buttonHasil;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JButton buttonKeluar;
+    private javax.swing.JButton buttonReset;
+    private javax.swing.JLabel jLabelAngka;
+    private javax.swing.JLabel jLabeljudul;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
